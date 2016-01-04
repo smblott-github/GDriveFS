@@ -29,6 +29,10 @@ def main():
                         required=False,
                         nargs=1)
 
+    # Dummy flags for autofs/automount.
+    parser.add_argument('-n', action='store_true')
+    parser.add_argument('-s', action='store_true')
+
     args = parser.parse_args()
 
     option_string = args.opt[0] if args.opt else None
